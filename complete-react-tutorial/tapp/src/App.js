@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NewComp from './components/NewComp'
+import Users from './components/Users'
 
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
           <h1>tut app</h1>
         <p>welcome</p>
-        <NewComp
+        <Users
             users={ this.state.users }
         />
 
