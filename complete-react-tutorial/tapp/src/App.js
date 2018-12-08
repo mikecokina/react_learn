@@ -3,22 +3,23 @@ import NewComp from './components/NewComp'
 
 
 class App extends Component {
+  state = {
+    users: [
+        { name: "Mike", age:25, state: "online", uid: 1},
+        { name: "Chris", age: 21, state: "offline", uid: 2 },
+        { name: "Mia", age: 22, state: "online", uid: 3 }
+    ]
+  };
+
+
   render() {
     return (
       <div className="App">
           <h1>tut app</h1>
         <p>welcome</p>
         <NewComp
-          age="33"
-          name="Mike"
-          status="online"
+            users={ this.state.users }
         />
-
-          <NewComp
-              age="31"
-              name="Chris"
-              status="offline"
-          />
 
       </div>
     );

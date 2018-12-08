@@ -3,18 +3,21 @@ import React, { Component } from 'react'
 
 class NewComp extends Component {
     render() {
-        const { name, age, status } = this.props
+        const { users } = this.props;
+        const userList = users.map(user => {
+            return (
+                <div className="new-comp" key={ user.uid }>
+                    <div>Name: { user.name }</div>
+                    <div>Age: { user.age }</div>
+                    <div>Status: { user.status }</div>
+                    <hr />
+                </div>
+            )
+        });
 
         return (
-            <div className="new-comp">
-                <div>Name: { this.props.name }</div>
-                <div>Age: { this.props.age }</div>
-                <div>Status: { this.props.status }</div>
-
-                /* distruct props */
-                <div>Name: { name }</div>
-                <div>Age: { age }</div>
-                <div>Status: { status }</div>
+            <div className="users-list">
+                { userList }
             </div>
 
 
