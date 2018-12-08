@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-const Users = (props) => {
-    const { users } = props;
+const Users = ({users}) => {
     const userList = users.map(user => {
         return (
             <div className="new-comp" key={ user.uid }>
