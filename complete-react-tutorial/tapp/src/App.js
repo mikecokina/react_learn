@@ -5,7 +5,7 @@ import Users from './components/Users'
 class App extends Component {
   state = {
     users: [
-        { name: "Mike", age:25, state: "online", uid: 1},
+        { name: "Mike", age:31, state: "online", uid: 1},
         { name: "Chris", age: 21, state: "offline", uid: 2 },
         { name: "Mia", age: 22, state: "online", uid: 3 }
     ]
