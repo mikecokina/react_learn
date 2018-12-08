@@ -18,17 +18,25 @@
                 age: 28
             };
 
-            handleOnClick(e) {
-                console.log(e.target);
-            }
+            handleOnClick = (e) => {
+                // console.log(e.target);
+                console.log(this.state);
+            };
 
-            handleOnMouseOver(e) {
+            handleOnMouseOver = (e) => {
                 console.log(e.pageX, e.pageY);
-            }
+            };
 
-            handleOnCopy(e) {
+            handleOnCopy = (e) => {
                 console.log("copy invoked");
-            }
+            };
+
+            changeName = (e) => {
+                this.setState({
+                    name: 'Chris',
+                    age: 22
+                }, null /* because of webstorm to stop highlighting a callback */)
+            };
 
             render(){
                 return(
@@ -40,6 +48,7 @@
 
                         <button onClick={ this.handleOnClick }>on click</button>
                         <button onMouseOver= { this.handleOnMouseOver }>on hover</button>
+                        <button onClick= { this.changeName }>change name</button>
 
 
                         <p onCopy={ this.handleOnCopy }>Some sentence come here</p>
