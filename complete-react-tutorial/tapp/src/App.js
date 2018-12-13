@@ -23,6 +23,17 @@ class App extends Component {
       })
   };
 
+  deleteUser = (uid) => {
+      let usersCopy = [...this.state.users];
+      usersCopy = usersCopy.filter(user => {
+          return user.uid !== uid
+      });
+      this.setState({
+          users: usersCopy
+      });
+      console.log(uid);
+  };
+
 
   render() {
     return (
@@ -31,8 +42,11 @@ class App extends Component {
           <p>welcome</p>
           <Users
               users={ this.state.users }
+              deleteUserFn={this.deleteUser}
           />
-          <AddUser addUserFn={this.addUser} />
+          <AddUser
+              addUserFn={this.addUser}
+          />
 
       </div>
     );
