@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Users from './components/Users'
+import Users from './components/Users';
+import AddUser from './components/AddUser';
 
 
 class App extends Component {
@@ -16,10 +17,11 @@ class App extends Component {
     return (
       <div className="App">
           <h1>tut app</h1>
-        <p>welcome</p>
-        <Users
-            users={ this.state.users }
-        />
+          <p>welcome</p>
+          <Users
+              users={ this.state.users }
+          />
+          <AddUser />
 
       </div>
     );

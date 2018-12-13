@@ -18,7 +18,7 @@ const Users = ({users}) => {
     // });
 
     const userList = users.map(user => {
-        return user.age > 30 ? (
+        return user.age > 15 ? (
             <div className="new-comp" key={user.uid}>
                 <div>Name: {user.name}</div>
                 <div>Age: {user.age}</div>
