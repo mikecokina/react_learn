@@ -13,6 +13,17 @@ class App extends Component {
   };
 
 
+  addUser = (user) => {
+      user.uid = Math.random();
+      let usersCopy = [...this.state.users];
+      usersCopy.push(user);
+
+      this.setState({
+          users: usersCopy
+      })
+  };
+
+
   render() {
     return (
       <div className="App">
@@ -21,7 +32,7 @@ class App extends Component {
           <Users
               users={ this.state.users }
           />
-          <AddUser />
+          <AddUser addUserFn={this.addUser} />
 
       </div>
     );

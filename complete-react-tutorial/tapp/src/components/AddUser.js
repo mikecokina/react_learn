@@ -16,8 +16,8 @@ class AddUser extends Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault();
-        const currentState = this.state;
-        console.log(currentState);
+        let currentState = this.state;
+        this.props.addUserFn(currentState);
 
     };
 
