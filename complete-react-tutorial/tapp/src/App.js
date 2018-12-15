@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Users from './components/Users';
 import AddUser from './components/AddUser';
+import './css/style.css'
 
 
 class App extends Component {
