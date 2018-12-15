@@ -14,7 +14,20 @@ class App extends Component {
   };
 
 
-  addUser = (user) => {
+  // invoke when component is first time mounted
+  componentDidMount() {
+      console.log("component " + this + "mounted");
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+      console.log("component updated");
+      console.log("current state:");
+      console.log(this.state);
+
+  }
+
+
+    addUser = (user) => {
       user.uid = Math.random();
       let usersCopy = [...this.state.users];
       usersCopy.push(user);
