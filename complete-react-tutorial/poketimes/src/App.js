@@ -8,8 +8,6 @@ import Post from './components/Post'
 import './style.css'
 
 
-
-
 class App extends Component {
     render() {
     return (
